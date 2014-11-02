@@ -1,12 +1,33 @@
-<% if user_signed_in? %>
+<div class="user_control_div" id="user_control_div">
 
-<h3>You are signed in</h3>
-<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+	<% if user_signed_in? %>
+		You are signed in<br>
+		<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
 
-<% else %>
+	<% else %>
 
-<h1> Welcome! </h1>
-<%= link_to "Sign In", new_user_session_path, :method => :get %>
-<%= link_to "Sign up", new_user_registration_path, :method => :get %>
+		<h1> Welcome! </h1>
+		<%= link_to "Sign In", new_user_session_path, :method => :get %>
+		<%= link_to "Sign up", new_user_registration_path, :method => :get %>
 
-<% end %>
+		<% end %>
+
+</div>
+
+<h2 style="text-align:center">Main Player Dashboard</h2>
+
+<div class="player_div" id="player_div">
+	Victories: @player.victories
+	Defeats: @player.defeats
+	<div id="army_div>
+		@player.army.footmen 
+		@player.army.archers
+		@player.army.siegeunits
+	</div>
+</div>
+<div class="action_div" id="action_div">
+	
+</div>
+<div class="social_div" id="social_div">
+
+</div>

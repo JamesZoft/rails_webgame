@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102024346) do
+ActiveRecord::Schema.define(version: 20141102075752) do
 
   create_table "combat_units", id: false, force: true do |t|
     t.string  "name",          limit: 256
@@ -19,16 +19,12 @@ ActiveRecord::Schema.define(version: 20141102024346) do
     t.integer "base_attack",   limit: 11
     t.integer "base_health",   limit: 11
     t.integer "base_movement", limit: 11
+    t.integer "user_id"
   end
 
   create_table "players", force: true do |t|
-    t.string   "username"
-    t.string   "salt"
-    t.string   "encrypted_password"
     t.integer  "victories"
-    t.integer  "money"
-    t.string   "tech_level"
-    t.integer  "towns_held"
+    t.integer  "defeats"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
