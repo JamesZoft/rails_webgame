@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tech_level: MyString
+  base_attack: 1
+  base_health: 1
+  base_movement: 1
+
+two:
+  name: MyString
+  tech_level: MyString
+  base_attack: 1
+  base_health: 1
+  base_movement: 1

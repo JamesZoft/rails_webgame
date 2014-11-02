@@ -1,0 +1,20 @@
+<h1>Players#new</h1>
+<p>Find me in app/views/players/new.html.erb</p>
+<% @page_title = "PlayerAuth | Signup" %>
+<div class="Sign_Form">
+  <h1>Sign Up</h1>
+  <%= form_for(:player, :url => {:controller => 'players', :action => 'create'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :username%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+  <% if @player.errors.any? %>
+    <ul class="Signup_Errors">
+    <% for message_error in @player.errors.full_messages %>
+      <li>* <%= message_error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>
+

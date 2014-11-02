@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password: MyString
+  victories: 1
+  money: 1
+  tech_level: MyString
+  towns_held: 1
+
+two:
+  username: MyString
+  password: MyString
+  victories: 1
+  money: 1
+  tech_level: MyString
+  towns_held: 1
